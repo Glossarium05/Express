@@ -1,0 +1,20 @@
+doctype
+head
+    title= "Считаем факториал!"
+    meta(charset='utf-8')
+    link( rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+
+body
+    .container
+        h1 Вычисление факториала
+
+        form(method='get' action='/')
+            div.form-group
+                label(for='digit') Введите число для расчёта факториала:
+                div.row
+                    input#digit.form-control(type='number', placeholder='Введите число, например 5' name='digit')
+                    br
+                    button.btn.btn-primary(type='submit') Рассчитать
+
+        p Your digit: #{query.digit}
+        p Your factorial: #{answ}
